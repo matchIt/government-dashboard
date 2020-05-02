@@ -64,6 +64,145 @@ const VendorComponent = (props) => {
           </div>
         </div>
       </header>
+      <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col">
+          <div className="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+              <table className="min-w-full">
+                <thead>
+                  <tr>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Vendor's Name
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Vendor's Location
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Vendor's Email
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Registered At
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Takoradi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      bernardlane@example.com
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      15 hours ago
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        Activate
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Kumasi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      bernardlane@example.com
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Last Wednesday at 2:31 PM
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        Activate
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Kumasi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      bernardlane@example.com
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      April 2, 2020 2:31 PM
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Accra, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      bernardlane@example.com
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      March 25, 2020 2:31 PM
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        Activate
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Director, Human Resources
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      bernardlane@example.com
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      January 5, 2020 2:31 PM
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };

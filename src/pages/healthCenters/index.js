@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Li } from "evergreen-ui";
 
 const HealthCentersDepartment = (props) => {
   return (
@@ -60,20 +59,150 @@ const HealthCentersDepartment = (props) => {
                   Health Centers
                 </h2>
               </div>
-              <div className="mt-4 flex-shrink-0 flex md:mt-0 md:ml-4">
-                <span className="ml-3 shadow-sm rounded-md">
-                  <button
-                    type="button"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-700 active:bg-blue-700 transition duration-150 ease-in-out"
-                  >
-                    Add Health Center
-                  </button>
-                </span>
-              </div>
+              <div className="mt-4 flex-shrink-0 flex md:mt-0 md:ml-4"></div>
             </div>
           </div>
         </div>
       </header>
+      <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col">
+          <div className="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+              <table className="min-w-full">
+                <thead>
+                  <tr>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Name
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Location
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 text-center bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Number Of Covid Cases
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 text-center bg-gray-800 text-left text-xs leading-4 font-medium text-gray-100 uppercase tracking-wider">
+                      Max. No. of Carrying Capacity
+                    </th>
+                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-800"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Takoradi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      2
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      1599
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm  leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Kumasi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      20
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      2000
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Kumasi, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      729
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      700
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                      Accra, Gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      500
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      1000
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                      Bernard Lane
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                     Accra, gh
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      20
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-sm text-center leading-5 text-gray-500">
+                      1500
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        View
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };
