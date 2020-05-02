@@ -1,30 +1,30 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
+import {
+  Map,
+  GoogleApiWrapper,
+  InfoWindow,
+  Marker,
+  Circle,
+  Polygon,
+} from "google-maps-react";
 import regionData from "../../components/data/metaData";
 import Axios from "axios";
-import {Spinner} from "evergreen-ui";
+import { Spinner } from "evergreen-ui";
+import MapWithAMarker from "./map";
 
 const PopulationComponent = (props) => {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
   const [latLng, setLatLng] = useState({
-    lat: 8.2262386,
-    lng: -0.6535913999999999,
+    lat: 7.946527,
+    lng: -1.023194,
   });
+  const [bounds, setBounds] = useState([
+    { lat: 11.1750308, lng: 1.199972 },
+    { lat: 4.6339001, lng: -3.2607859 },
+  ]);
   const [name, setName] = useState("Ghana");
-
-  let points = [
-    { lat: 42.02, lng: -77.01 },
-    { lat: 42.03, lng: -77.02 },
-    { lat: 41.03, lng: -77.04 },
-    { lat: 42.05, lng: -77.02 },
-  ];
-  let bounds = new props.google.maps.LatLngBounds();
-  for (let i = 0; i < points.length; i++) {
-    bounds.extend(points[i]);
-  }
-
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
@@ -34,7 +34,8 @@ const PopulationComponent = (props) => {
       );
       setLatLng(data.data.results[0].geometry.location);
       setName(data.data.results[0].formatted_address);
-      console.log(data.data.results[0].geometry.location);
+      setBounds(data.data.results[0].geometry.bounds);
+      console.log(data.data.results[0].geometry.bounds);
       setLoading(false);
     } catch (e) {
       console.log(e);
@@ -124,6 +125,15 @@ const PopulationComponent = (props) => {
         </div>
       </header>
       <div className="pl-10">
+        {/*<MapWithAMarker*/}
+        {/*  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtsKSqZLKQeh4oZAk05n5zYwZ_GswtzHk&v=3.exp&libraries=geometry,drawing,places"*/}
+        {/*  loadingElement={<div style={{ height: `100%` }} />}*/}
+        {/*  containerElement={<div style={{ height: `100vh`,width:'95%' }} />}*/}
+        {/*  mapElement={<div style={{ height: `100%` }} />}*/}
+        {/*  latLng={latLng}*/}
+        {/*  bounds={bounds}*/}
+
+        {/*/>*/}
         <Map
           google={props.google}
           zoom={7}
@@ -131,40 +141,56 @@ const PopulationComponent = (props) => {
           initialCenter={latLng}
           center={latLng}
         >
-          <InfoWindow position={latLng}>
-            <div className={"bg-white p-10"}>
-              <h1>Oh meeee</h1>
-            </div>
-          </InfoWindow>
-          <Marker position={latLng} draggable={true} />
-
-          {/*{regionsInGhana.map(({ name, fillColor, strokeColor }) => (*/}
-          {/*    <Polygon*/}
-          {/*        paths={getRegionalPolygon(name)}*/}
-          {/*        strokeColor={strokeColor}*/}
-          {/*        strokeOpacity={0.8}*/}
-          {/*        strokeWeight={1}*/}
-          {/*        fillColor={fillColor}*/}
-          {/*        onMouseover={() => console.log(name)}*/}
-          {/*        fillOpacity={0.35}*/}
-          {/*    />*/}
-          {/*))}*/}
+        <Circle
+          radius={100000}
+          center={latLng}
+          onMouseover={() => console.log("mouseover")}
+          onClick={() => console.log("click")}
+          onMouseout={() => console.log("mouseout")}
+          strokeColor="red"
+          strokeOpacity={0}
+          strokeWeight={5}
+          fillColor="red"
+          fillOpacity={0.2}
+        />
+          <Marker
+            position={latLng}
+            draggable={false}
+            onClick={() => alert("hello")}
+          />
         </Map>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 250,
+            left: 50,
+            boxShadow: "5px 2px 10px #888888",
+          }}
+          className={"bg-white p-3 rounded"}
+        >
+          Name Of Location: {name} <br />
+          latitude: {latLng.lat} <br />
+          longitude: {latLng.lng}
+        </div>
       </div>
-      {loading && <div
-        style={{
-          position: "absolute",
-          height: "150vh",
-          width: "100vw",
-          background: "rgba(0,0,0,0.5)",
-          top: 0,
-          display: "flex",
-          justifyContent: "center",
-          alignItems:'center'
-        }}
-      >
-        <span className={"text-white"}><Spinner style={{color:'#000'}} size={100} /></span>
-      </div>}
+      {loading && (
+        <div
+          style={{
+            position: "absolute",
+            height: "150vh",
+            width: "100vw",
+            background: "rgba(0,0,0,0.5)",
+            top: 0,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <span className={"text-white"}>
+            <Spinner style={{ color: "#000" }} size={100} />
+          </span>
+        </div>
+      )}
     </Fragment>
   );
 };
@@ -172,3 +198,4 @@ const PopulationComponent = (props) => {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAtsKSqZLKQeh4oZAk05n5zYwZ_GswtzHk",
 })(PopulationComponent);
+// export default PopulationComponent;
